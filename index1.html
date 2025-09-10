@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vignesh 5 Star Hotel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', serif;
+      background: #f7f5f2;
+      color: #2c2c2c;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #2c2c2c;
+      color: #fff;
+      padding: 24px 0 12px 0;
+      font-family: 'Playfair Display', serif;
+      box-shadow: 0 2px 8px rgba(44,44,44,0.08);
+    }
+
+    .header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 1.1em;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #e2b76b;
+    }
+
+    .hero.classic-hero {
+      background: #e2b76b;
+      padding: 60px 0 40px 0;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      color: #2c2c2c;
+    }
+
+    .hero-content h2 {
+      font-size: 2.5em;
+      margin-bottom: 12px;
+    }
+    .hero-content p {
+      font-size: 1.2em;
+      margin-bottom: 24px;
+    }
+    .hero-content button {
+      background: #2c2c2c;
+      color: #fff;
+      border: none;
+      padding: 12px 32px;
+      font-size: 1.1em;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .hero-content button:hover {
+      background: #e2b76b;
+      color: #2c2c2c;
+      border: 1px solid #2c2c2c;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .booking-form.classic-form {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 16px rgba(44,44,44,0.08);
+      padding: 40px 0;
+      margin: 40px 0;
+    }
+
+    .booking-form h2 {
+      font-family: 'Playfair Display', serif;
+      color: #2c2c2c;
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #e2b76b;
+      border-radius: 4px;
+      font-size: 1em;
+      margin-bottom: 4px;
+      background: #f7f5f2;
+    }
+
+    .btn-classic {
+      background: #e2b76b;
+      color: #2c2c2c;
+      border: none;
+      padding: 12px 32px;
+      font-size: 1.1em;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Playfair Display', serif;
+      transition: background 0.2s;
+    }
+    .btn-classic:hover {
+      background: #2c2c2c;
+      color: #fff;
+    }
+
+    #confirmation {
+      margin-top: 24px;
+      background: #e2b76b;
+      color: #2c2c2c;
+      padding: 16px;
+      border-radius: 6px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .contact.classic-contact {
+      background: #f7f5f2;
+      padding: 32px 0;
+      font-family: 'Roboto', serif;
+    }
+
+    .contact h2 {
+      font-family: 'Playfair Display', serif;
+      color: #2c2c2c;
+      margin-bottom: 18px;
+    }
+
+    .contact a {
+      color: #2c2c2c;
+      text-decoration: underline;
+    }
+
+    footer.classic-footer {
+      background: #2c2c2c;
+      color: #fff;
+      text-align: center;
+      padding: 18px 0;
+      font-family: 'Roboto', serif;
+      font-size: 1em;
+      margin-top: 40px;
+      border-top: 2px solid #e2b76b;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-flex">
+      <h1>Vignesh 5 Star Hotel</h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#booking">Book Now</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero classic-hero">
+    <div class="hero-content">
+      <h2>Welcome to Luxury</h2>
+      <p>Experience comfort and elegance at Vignesh 5 Star Hotel.</p>
+      <button onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">Book Now</button>
+    </div>
+  </section>
+
+  <!-- Booking Form -->
+  <section id="booking" class="booking-form classic-form">
+    <div class="container">
+      <h2>Book Your Stay</h2>
+      <form id="hotelForm">
+        <div class="form-group">
+          <label for="checkin">Check-in Date:</label>
+          <input type="date" id="checkin" required>
+        </div>
+        <div class="form-group">
+          <label for="checkout">Check-out Date:</label>
+          <input type="date" id="checkout" required>
+        </div>
+        <div class="form-group">
+          <label for="guests">Guests:</label>
+          <input type="number" id="guests" min="1" max="10" required>
+        </div>
+        <div class="form-group">
+          <label for="room">Room Type:</label>
+          <select id="room" required>
+            <option value="Deluxe">Deluxe</option>
+            <option value="Suite">Suite</option>
+            <option value="Presidential">Presidential</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-classic">Confirm Booking</button>
+      </form>
+
+      <!-- Booking Confirmation -->
+      <div id="confirmation" class="hidden">
+        <h3>Booking Confirmed ✅</h3>
+        <p id="details"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact classic-contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:info@vigneshhotel.com">info@vigneshhotel.com</a></p>
+      <p>Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
+    </div>
+  </section>
+
+  <footer class="classic-footer">
+    <div class="container">
+      <p>&copy; 2025 Vignesh 5 Star Hotel. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("hotelForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      let checkin = document.getElementById("checkin").value;
+      let checkout = document.getElementById("checkout").value;
+      let guests = document.getElementById("guests").value;
+      let room = document.getElementById("room").value;
+
+      let details = `
+        <strong>Check-in:</strong> ${checkin} <br>
+        <strong>Check-out:</strong> ${checkout} <br>
+        <strong>Guests:</strong> ${guests} <br>
+        <strong>Room Type:</strong> ${room}
+      `;
+
+      document.getElementById("details").innerHTML = details;
+      document.getElementById("confirmation").classList.remove("hidden");
+    });
+  </script>
+</body>
+</html>
